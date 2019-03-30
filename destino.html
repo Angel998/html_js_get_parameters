@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Destino</title>
+
+    <style>
+    .d-block {
+        display: block;
+    }
+    </style>
+</head>
+<body>
+    
+    <form action="">
+        <input class="d-block" type="text" name="mensaje" id="mensaje" placeholder="Mensaje recibido">
+    </form>
+
+    <script>
+    var url_string = window.location.href
+    var url = new URL(url_string);
+    var mensaje = url.searchParams.get("mensaje");
+    document.getElementById('mensaje').value = mensaje
+    </script>
+</body>
+</html>
